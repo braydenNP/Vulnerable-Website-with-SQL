@@ -1,2 +1,6 @@
-PHP file is not an executable by itself. Actually to execute it you need a PHP interpreter which will just read the file, parse it and execute. So from the OS point of view there is no need to have executable permissions on .php files. Only read permissions are needed.
+youtube video sql to rce: https://youtu.be/YLqpfUXiSRo
 
+links:
+https://stackoverflow.com/questions/54307842/php-file-executed-even-without-executable-permissions#:~:text=PHP%20file%20is%20not%20an,php%20files.
+
+https://askubuntu.com/questions/9402/what-file-permissions-should-i-set-on-web-root

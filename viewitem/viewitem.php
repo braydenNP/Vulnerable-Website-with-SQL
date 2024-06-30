@@ -1,7 +1,10 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
-    // Ensure ID is treated as an integer
-    $id = (int) $_GET['id'];
+    	    
+    $id = $_GET['id'];
 
     // Debug: Output the retrieved ID
     echo "Retrieved ID: $id<br>";
@@ -16,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
     $query = "SELECT description FROM products WHERE id = $id";
 
     // Debug: Output the SQL query
-    echo "Running query: $query<br>";
+    //echo "Running query: $query<br>";
 
     $result = $conn->query($query);
 

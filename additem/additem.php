@@ -1,6 +1,8 @@
 <?php
-    //sudo nano /var/www/html/additem.php
-    //itemdetails.php?itemID=15 INTO OUTFILE '/var/www/rce.php'
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $description = $_POST['description'];
 
@@ -10,15 +12,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $query = "INSERT INTO products (description) VALUES ('$description')";
-    echo "Running query: htmlspecialchars($query)<br>";
-    
+    //echo "Running query: " . htmlspecialchars($query) . "<br>";
+   
     if ($conn->query($query) === TRUE){
         echo "New product added successfully!";
     } else {
         echo "Error: " . $conn->error;
     }
 } else {
-    echo "Invalud request method.";
+    echo "Invalid request method.";
 }
 ?>
 
