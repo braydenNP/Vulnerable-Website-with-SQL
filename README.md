@@ -155,10 +155,3 @@ sudo nano /var/www/html/viewitem.php
 ```
 Paste the 4 scripts into their respective location 
 
-
-# ? Do we need secure file priv, 
-# ? Do we need mysql to own the /var/www/html folder?
-
-# it does not work within 10 minutes
-
-Im getting familiar errors.
